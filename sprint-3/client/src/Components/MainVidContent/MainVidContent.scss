@@ -1,0 +1,274 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+
+.main-vid {
+    margin-bottom: 2.5rem;
+    width: fit-content;
+    &__hero{
+        margin-top: 1rem;
+        height: 57vw;
+        margin-bottom: 1.5rem;
+        @include tablet {
+            margin-bottom: .5rem;
+        }
+        @include desktop-small {
+            height: 38vw;
+            margin-bottom: 3rem;
+        }
+        @include desktop-lg {
+            height: 38vw;
+            margin-bottom: 3.5rem;
+        }
+    }
+    &__hero-ctn {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        @include tablet {
+            height: 92%;
+            width: 100%;
+            padding-right: 2rem;
+            padding-left: 2rem;
+            background-color: $black;
+        }
+        @include desktop-small {
+            height: 100%;
+            padding-right: 7rem;
+            padding-left: 7rem;
+        }
+        @include desktop-lg {
+            height: 100%;
+            padding-right: 7rem;
+            padding-left: 7rem;
+        }
+    }
+    &__hero-vid {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+    
+    &__info {
+        padding: 0 1rem 0 1rem;
+        @include tablet {
+            padding: 0 1.5rem 0 1.5rem;
+        }
+        @include desktop-small {
+            padding: 0;
+        }
+        @include desktop-lg {
+            padding: 0;
+        }
+    }
+
+    &__controls {
+        position: absolute;
+        z-index: 2;
+        bottom: 8px;
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-between;
+        left: 5%;
+        align-items: center;
+        @include desktop-small {
+            width: 75%;
+            left: 12.5%;
+        }
+        @include desktop-lg {
+            width: 81%;
+            left: 10.5%;        
+        }
+    }
+    &__play {
+        text-align: center;
+        width: 37px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 12px;
+        border-radius: 5px;
+        @include tablet {
+            padding: 9px 12px;
+            margin-left: 8px;
+        }
+    }
+    &__playback {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 55%;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 12px 10px;
+        border-radius: 5px;
+        @include tablet {
+            width: 75%;
+            padding: 12px 10px;
+            justify-content: space-between;
+        }
+        @include desktop-lg {
+            width: 80%;
+        }
+    }
+    &__length {
+        width: 80%;
+        background-color: #000000;
+        display: flex;
+        height: 4px;
+        margin: 0 auto;
+        border-radius: 5px;
+        @include tablet {
+            width: 85%;
+            margin:0;
+        }
+    }
+    &__time {
+        display: none;
+        @include tablet {
+            display: inline;
+            font-size: .7rem;
+            letter-spacing: .1rem;
+            color: #FFFFFF;
+        }
+    }
+    &__screen-volume {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 12px;
+        border-radius: 5px;
+        width: 25%;
+        position: relative;
+        height: 30px;
+        @include tablet {
+            width: 12%;
+            height: 35px;
+            margin-right: 8px;
+        }
+        @include desktop-small {
+            width: 11%;
+        }
+        @include desktop-lg {
+            width: 8%;
+            margin-right: 35px;
+        }
+    }
+    &__fullscreen {
+        position: absolute;
+        left: 15px;
+        top: 22%;
+        @include tablet {
+            top: 25%;
+        }
+    }
+    &__volume {
+      position: absolute;
+      right: 15px;
+      top: 22%;
+      @include tablet {
+        top: 25%;
+    }
+    }
+
+    &__header{
+        font-size: 1.5rem;
+        font-weight: 900;
+        padding-bottom: 1rem;
+        line-height: 2rem;
+        letter-spacing: .05rem;
+        @include tablet {
+            font-size: 2.5rem;
+            padding-bottom: 1.5rem;
+            line-height: 3rem;
+        }
+        @include desktop-small {
+            font-size: 2rem;
+        }
+        @include desktop-lg {
+            width: 95%;
+        }
+    }
+    &__info-ctn{
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;        
+        }
+        @include desktop-small {
+            width: 90%;
+        }
+        @include desktop-lg {
+            width: 90%;
+        }
+    }
+    &__poster-info {
+        padding-bottom: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    &__author {
+        font-size: 1rem;
+        font-weight: 500;
+        padding-right: 0.5rem;
+        letter-spacing: .05rem;
+    }
+    &__date {
+        font-size:.95rem;
+        color: $silver;
+    }
+    &__viewer-info {
+        display: flex;
+        padding-bottom: 1.5rem;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    &__viewer-icon {
+        padding-right: .5rem;
+    }
+    &__views {
+        padding-right: 1rem;
+        font-size: .95rem;
+    }
+    &__likes-icon {
+        padding-right: .5rem;
+    }
+    &__likes{
+        font-size: .95rem;
+    }
+    &__split {
+        width: 100%;
+        height: 1px;
+        background-color: $mercury; 
+        margin-bottom: 1.5rem;
+        @include desktop-small {
+            width: 95%;
+        }
+        @include desktop-lg {
+            width: 59vw;
+        }
+    }
+    &__desc{
+        font-size: .8rem;
+        line-height: 1.2rem;
+        text-align: left;
+        color: $black;
+        @include tablet {
+            font-size: 1rem;
+            line-height: 1.8rem;
+            width: 76%;
+        }
+    }
+    .border {
+        @include desktop-small {
+            border-right: 1px solid $mercury;
+        height: 100%;
+        position: absolute;
+        left: 95%;
+        }
+        @include desktop-lg {
+            border-right: 1px solid $mercury;
+        height: 100%;
+        position: absolute;
+        left: 95%;
+        }
+    }
+}

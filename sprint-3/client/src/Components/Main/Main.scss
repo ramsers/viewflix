@@ -1,0 +1,35 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+.main-content {
+    height: 100%;
+    &__wrapper {
+        @include desktop-small {
+            display: flex;
+            flex-direction: row;
+            padding: 0 3rem 0 3rem;
+        }
+    @include desktop-lg {
+            display: flex;
+            flex-direction: row;
+            padding: 0 4rem 0 4rem;
+        }
+    }
+    &__main-vid-ctn {
+        @include desktop-small{
+            position: relative;
+            width: 70vw;
+        }
+        @include desktop-lg {
+            width: 70vw;
+            position: relative;
+        }
+    }
+    &__aside-ctn {
+        @include desktop-small {
+            display: contents;
+        }
+        @include desktop-lg {
+            display: contents;
+        }
+    }
+}

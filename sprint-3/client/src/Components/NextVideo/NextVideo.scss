@@ -1,0 +1,57 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.next-vid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 1rem 0 1rem;
+        @include tablet {
+                width: 50%;
+            padding: 0 1.5rem 0 1.5rem;
+        }
+        @include desktop-small {
+            width: 30vw;
+            padding: 0 1.5rem 0 1.5rem;
+        }
+        @include desktop-lg {
+            width: 30vw;
+            padding: 0 1.5rem 0 1.5rem;
+        }
+    &__ctn{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+    &__head{
+        font-weight:100;
+        color: $silver;
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+        @include desktop-small {
+            margin-bottom: 0.5rem;
+        }
+        @include desktop-lg {
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__img {
+        width: 125px;
+        height: 75px;
+        margin-right: 1rem;
+        border-radius: 5px;
+    }
+    &__header {
+        font-size: .8rem;
+        line-height: 1.2rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        @include tablet {
+            font-size: .9rem;;
+        }
+    }
+    &__channel {
+        font-size: .8rem;
+    }
+}

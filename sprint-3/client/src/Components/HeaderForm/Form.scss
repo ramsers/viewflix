@@ -1,0 +1,98 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+.header {
+    &__form-ctn {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        @include tablet {
+            width: 61%;
+        }
+    }
+    &__form {
+        @include tablet {
+            width: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        @include desktop-small {
+            justify-content: flex-end;
+        }
+        @include desktop-lg {
+            margin-left: 11rem;
+        }
+    }
+    &__input {
+        width:100%;
+        background-color: $alabaster;
+        height: 50px;
+        border-radius: 4px;
+        border: 1px solid $silver;
+        color: $black;
+        position: relative;
+        font-size: .9rem;
+        margin-bottom: .5rem;
+        &::placeholder{
+            padding-left: 40px;
+        }
+        @include tablet {
+            width: 55%;
+            margin-right: 1rem;
+        }
+        @include desktop-small {
+            width: 45%;
+        }
+    }
+    &__search {
+        position: absolute;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        @include desktop-small {
+            position: relative;
+            left: 34px;
+            height: 34px;
+        }
+    }
+    &__button {
+        padding: 17px;
+        width: 75%;
+        text-align: center;
+        border-radius: 5px;
+        background-color: $brainRedBright;
+        color: $black;
+        text-transform: uppercase;
+        font-size: .95rem;
+        @include tablet {
+            padding: 16px 0 16px 0;
+            width: 90%;
+            height: 49px;
+            margin-right: 1.5rem;
+        }
+        @include desktop-small {
+            width: 90%;
+        }
+    }
+    &__upload {
+        padding-right: 10px;
+        vertical-align: text-top;
+        height: 16px;
+        @include tablet {
+            padding-right: 5px;
+        }
+    }
+    &__user-img {
+        width:50px;
+        height: 50px;
+        border-radius: 50%;
+        vertical-align: middle;
+        position: absolute;
+        right: 0;
+        @include tablet {
+            position: static;
+        }
+    }
+}

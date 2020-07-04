@@ -1,0 +1,138 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+// Hero Section Styles
+
+.comments {
+    &__head {
+        padding: 0 0 2rem 1rem;
+        font-size: 1.2rem;
+    font-weight: 600; 
+        @include tablet {
+            padding: 0 0 3.5rem 1.5rem; 
+            font-size: 1.5rem;
+        }
+        @include desktop-lg {
+            padding: 0 0 3.5rem 0;
+        }
+    }
+    &__ctn {
+        padding: 0 1rem 0 1rem;
+        @include tablet {
+            padding: 0 1.5rem 1rem 1.5rem;
+        }
+        @include desktop-small {
+            padding: 0;
+        }
+        @include desktop-lg {
+            padding: 0;
+        }
+    }
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+            display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: flex-start;
+        width: 100%;
+        }
+    }
+    &__form-info-ctn {
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        @include tablet {
+            width:95%;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &__user-img-1 {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+    }
+    &__title {
+        font-size: 1rem;
+        color: $silver;
+        text-transform: uppercase;
+        padding-bottom: .5rem;
+    }
+    &__title-2 {
+        font-size: .8rem;
+        font-weight: 500;
+        color: silver;
+        text-transform: uppercase;
+        padding-bottom: .5rem;
+        @include tablet {
+            position: absolute;
+            z-index: 2;
+            margin-top: -1rem;
+        }
+    }
+    &__field {
+        border: 1px solid $silver;
+        background: $alabaster;
+        border-radius: 5px;
+        height: 95px;
+        margin-bottom: 1.5rem;
+        color: $black;
+        position: relative;
+        text-overflow: ellipsis !important;
+        &:focus{
+            border: 2px solid $black;
+        }
+        &::placeholder {
+            color: $black;
+            padding-top: 0.7rem;
+            padding-left: .5rem;
+        }
+        @include tablet {
+            height:56px;
+            width: 65%;
+            &::placeholder {
+                color: $black;
+                padding-left: .9rem;
+            }
+        }
+        @include desktop-small {
+            padding-left: .5rem;
+            width: 65%;
+        }
+        @include desktop-lg {
+            height:56px;
+            width: 65%;
+        }
+    }
+   
+    &__btn {
+        padding: 20px 10px;
+        border-radius: 5px;
+        color: $black;
+        background-color: $brainRedBright;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        width: 212px;
+        display: flex;
+        align-self: flex-end;
+        justify-content: center;  
+        @include tablet {
+          width: 160px;
+          margin-left: 1rem;
+          text-transform: uppercase;
+        }
+        @include desktop-small {
+            width: 140px;
+        }  
+        @include desktop-lg {
+            width: 160px;
+            margin-left: 1rem;
+            text-transform: uppercase;
+        }
+    }
+ }
+    
+   

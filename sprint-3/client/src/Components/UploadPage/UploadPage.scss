@@ -1,0 +1,229 @@
+@import '../../partials/variables';
+@import '../../partials/mixins';
+
+
+.header {
+    position: relative;
+    @include tablet {
+        padding-top: 1.5rem;
+    }
+}
+
+.upload{
+    padding: 0 1rem 0 1rem;
+    height: 100%;
+    @include tablet {
+        padding: 0 1.5rem 0 1.5rem;
+    }
+    @include desktop-small {
+        padding: 0 3rem 0 3rem;
+    }
+    @include desktop-lg {
+        padding: 0 3rem 0 3rem;
+    }
+   
+    &__ctn{
+        height: 100vw;
+        @include desktop-small {
+            height: 100%;
+        }
+        @include desktop-lg {
+            height: 100%;
+        }
+    }
+    &__split{
+        margin-top: -1.8rem;
+        height: 1px;
+        background-color: $mercury;
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
+    &__header {
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: .07rem;
+        margin-top: 3.5rem;
+        padding-bottom: 2.5rem;
+        @include tablet {
+            font-size: 3rem;
+            padding-top: 2rem;
+            border-bottom: 1px solid $silver;
+        }
+    }
+    &__thumbnail-head {
+        text-transform: uppercase;
+        font-size: .9rem;
+        letter-spacing: .03rem;
+        font-weight: 500;
+        color: $silver;
+        padding-bottom: .5rem;
+        @include tablet {
+            padding-top: 3rem;
+            font-size: 1rem;
+        }
+    }
+    &__thumbnail-img {
+        width: 100%;
+        height: 9.5625rem;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+        @include tablet {
+            width: 50%;
+            height: 11.5rem;
+        }
+        @include desktop-small {
+            width: 35.5%;
+            margin-right: 1.5rem;
+            height: 15.2rem;
+        }
+        @include desktop-lg {
+            width: 35.5%;
+            margin-right: 1.5rem;
+            height: 15.2rem;
+        }
+    }
+    &__form-ctn{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include desktop-small {
+            flex-wrap: nowrap;
+            position: relative;
+        }
+        @include desktop-lg {
+            flex-wrap: nowrap;
+            position: relative;
+        }
+    }
+    &__form {
+        @include desktop-small {
+            margin-top: -23px;
+            width: 100%;
+        }
+        @include desktop-lg {
+            margin-top: -23px;
+            width: 100%;
+        }
+    }
+    &__label {
+        text-transform: uppercase;
+        font-size: .9rem;
+        letter-spacing: .03rem;
+        font-weight: 500;
+        color: $silver;
+        margin-bottom: 1rem;
+        @include tablet {
+            font-size: 1rem;
+        }
+    }
+    &__title {
+        width:100%;
+        background-color: $alabaster;
+        height: 50px;
+        border-radius: 4px;
+        border: 1px solid $silver;
+        color: $black;
+        font-size: .9rem;
+        margin-bottom: 1.5rem;
+        margin-top: .5rem;
+        padding-left: 10px;
+        &::placeholder {
+            padding-left: .5rem;
+            color: $black;
+            font-size: 1rem;
+        }
+        @include desktop-small {
+            width: 100%;
+        }
+        @include desktop-lg {
+            width: 100%;
+        }
+    }
+    &__desc{
+        margin-top: .5rem;
+        width:100%;
+        height: 8.9375rem;
+        font-size: .9rem;
+        background-color: $alabaster;
+        border-radius: 4px;
+        border: 1px solid $silver;
+        color: $black;
+        margin-bottom: 1.5rem;
+        padding-left: 10px;
+        padding-top: 10px;
+        &::placeholder {
+            padding-left: .5rem;
+            text-align: start;
+            padding-top: .5rem;
+            color: $black;
+            font-size: 1rem;
+            vertical-align: top;
+        }
+        @include desktop-small {
+            width: 100%;
+        }
+        @include desktop-lg {
+            width: 100%;
+        }
+    }
+    &__split-form {
+        display: none;
+        @include tablet {
+            display: block;
+            height: 1px;
+            background-color: $silver;
+            margin: 1.5rem 0 3rem 0;
+        }
+        @include desktop-small {
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+        @include desktop-lg {
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+    }
+    &__btn-ctn {
+        @include tablet {
+            display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        }
+        @include desktop-small {
+            margin-top: 4rem;
+        }
+        @include desktop-lg {
+            margin-top: 4rem;
+        }
+    }
+    &__publish-btn {
+        width: 100%;
+        height: 3.1875rem;
+        border-radius: 5px;
+        background-color: $brainRedBright;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: .95rem;
+        margin-bottom: 1rem;
+        @include tablet {
+            width: 160px
+        }
+    }
+    &__cancel-btn {
+        width: 100%;
+        height: 3.1875rem;
+        background-color: $white;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: .95rem;
+        color: $brainRedBright;
+        @include tablet {
+            width: 160px
+        }
+    }
+}
